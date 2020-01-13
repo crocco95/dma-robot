@@ -1,0 +1,8 @@
+prefix=/home/lorenzoc/Ros/catkin_ws/devel
+
+Name: driver_controller
+Description: Description of driver_controller
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/lorenzoc/Ros/catkin_ws/devel/lib 
+Requires: 
