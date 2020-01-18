@@ -15,8 +15,10 @@
   class OdometrySystemTask : public Task {
 
     public:
-      static OdometrySystemTask* getInstanceOf(); // Method to get singleton istance or create one if it
-                      // does not exists
+
+      // Method to get singleton istance or create one if it does not exists
+      static OdometrySystemTask* getInstanceOf();
+
       void init(int period);
 
     private:
@@ -29,9 +31,7 @@
       geometry_msgs::TransformStamped t;
       tf::TransformBroadcaster broadcaster;
 
-      double x;
-      double y;
-      double theta;
+      bool initFlag;
 
       OdometrySystemTask(); //Costructor
       void tick();

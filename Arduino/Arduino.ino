@@ -10,10 +10,12 @@ Scheduler sched(5);
 void setup() {
 
   Serial.begin(57600); //Setup Serial
+  //Serial.begin(115200); //Setup Serial
   sched.init(5);  //Setup scheduler
 
+  //Serial.println("Adding OdometryTask to scheduler...");
   OdometrySystemTask* odomTask = OdometrySystemTask::getInstanceOf();
-  odomTask->init(1);
+  odomTask->init(10);
   sched.addTask(odomTask);
 }
 
